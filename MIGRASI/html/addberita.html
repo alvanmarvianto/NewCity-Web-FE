@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tambah Berita: NewCity</title>
+    <title>NewCity Editor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/addberita.css">
@@ -12,77 +12,63 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
-<body style="overflow: hidden;">
+<body> 
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg" style="background: #ECEBE6;">
-        <div class="container-fluid">
-            <img src="../images/logo-NewCity.png" alt="logo-NewCity" style="width: 10%;" class="my-3 ms-3">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        <div class="container-fluid"> <img src="../images/logo-NewCity.png" alt="logo-NewCity" style="width: 10%;"
+                class="my-3 ms-3"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="navbar-nav me-auto mb-2 mb-lg-0">
-                </div>
-                <form class="d-flex">
-                    <a href="#" class="container-fluid mx-auto border border-success"
-                        style=" border-radius: 50%; padding: 0;">
-                        <img class="rounded-circle img-fluid" src="../images/img-profile.png" style="height: 50px;">
-                    </a>
-                </form>
+                <div class="navbar-nav me-auto mb-2 mb-lg-0"> </div>
+                <form class="d-flex"> <a href="#" class="container-fluid mx-auto border border-success"
+                        style=" border-radius: 50%; padding: 0;"> <img class="rounded-circle img-fluid"
+                            src="../images/img-profile.png" style="height: 50px;"> </a> </form>
             </div>
         </div>
-    </nav>
-    <!-- NAV BAR -->
-
+    </nav> 
+    <!-- NAV BAR --> 
+     
     <!-- SIDE BAR -->
     <div class="row">
         <div class="min-vh-100 d-flex align-items-center flex-column sidebar" style="background: #ECEBE6; width: 5%;">
-            <div class="mt-4"></div>
-            <a href="listBerita.html">
-                <div class="flex-column d-flex align-items-center flex-column icon-berita">
-                    <img src="../images/logo-berita.png" alt="icon-berita" style="width: 50%;">
+            <div class="mt-4"></div> <a href="Login.html">
+                <div class="flex-column d-flex align-items-center flex-column icon-berita"> <img
+                        src="../images/logo-berita.png" alt="icon-berita" style="width: 50%;">
                     <p class="" style="font-size: 13px; color: #3A5A40; font-weight: 600;">Berita</p>
                 </div>
-            </a>
-            <a href="Report.html">
-                <div class="flex-column d-flex align-items-center flex-column icon-berita">
-                    <img src="../images/logo-laporan.png" alt="icon-laporan" style="width: 50%;">
+            </a> <a href="Login.html">
+                <div class="flex-column d-flex align-items-center flex-column icon-berita"> <img
+                        src="../images/logo-laporan.png" alt="icon-laporan" style="width: 50%;">
                     <p class="" style="font-size: 13px; font-weight: 600; color: #3A5A40;">Laporan</p>
                 </div>
-            </a>
-            <a href="listAkun.html">
-                <div class="flex-column d-flex align-items-center flex-column icon-berita">
-                    <img src="../images/logo-pemerintah.png" alt="icon-laporan" style="width: 50%;">
+            </a> <a href="Login.html">
+                <div class="flex-column d-flex align-items-center flex-column icon-berita"> <img
+                        src="../images/logo-pemerintah.png" alt="icon-laporan" style="width: 50%;">
                     <p class="" style="font-size: 13px; font-weight: 600; color: #3A5A40;">Pemerintah</p>
                 </div>
             </a>
-        </div>
-
+        </div> 
+        
         <!-- MAIN CONTENT -->
-        <div class="col-md-10 d-flex p-4 editor-container">
+        <div class="col-md-10 d-flex p-4 editor-container"> 
+            
             <!-- Text Editor Section -->
             <div class="editor-content">
                 <div class="toolbar d-flex align-items-center mb-3">
-                    <div class="toolbar-buttons">
-                        <button class="btn btn-secondary btn-editor bold-btn">B</button>
-                        <button class="btn btn-secondary btn-editor italic-btn">I</button>
-                        <button class="btn btn-secondary btn-editor underline-btn" onclick="formatText('underline')">U</button>
-                        <button class="btn btn-secondary" onclick="formatText('createLink')">🔗</button>
-                        <button class="btn btn-secondary" onclick="formatText('strikeThrough')">S</button>
-                        <button class="btn btn-secondary" onclick="formatText('removeFormat')">X</button>
-                        <button class="btn btn-secondary" onclick="formatText('paste')">V</button>
-                    </div>
-                    <button class="btn btn-success ms-auto publish-button">Terbitkan</button>
+                    <div class="toolbar-buttons"> <button class="btn btn-secondary btn-editor bold-btn">B</button>
+                        <button class="btn btn-secondary btn-editor italic-btn">I</button> <button
+                            class="btn btn-secondary btn-editor underline-btn"
+                            onclick="formatText('underline')">U</button> <button class="btn btn-secondary"
+                            onclick="formatText('createLink')">🔗</button>
+                    </div> <button class="btn btn-success ms-auto publish-button">Terbitkan</button>
                 </div>
                 <div class="text-area border p-3 mb-3" contenteditable="true" id="editor">
-                    <h2>Tambah judul...</h2>
-                    <p>Mulai tulis isi berita di sini...</p>
+                    <h2>Tambah Judul</h2>
+                    <p>Tulis berita di sini</p>
                 </div>
-                
-            </div>
-
+            </div> 
+            
             <!-- Details Section -->
             <div class="details">
                 <div class="details-item">
@@ -102,31 +88,61 @@
                     <p class="detail-description status">Draft</p>
                 </div>
                 <h5>Kategori</h5>
-                <div>
-                    <input type="checkbox" id="bencanaAlam">
-                    <label for="bencanaAlam">Bencana Alam</label><br>
-                    <input type="checkbox" id="transportasi">
-                    <label for="transportasi">Transportasi</label><br>
-                    <input type="checkbox" id="saranaPrasarana">
-                    <label for="saranaPrasarana">Sarana & Prasarana</label><br>
-                    <a href="#">Tambah Kategori...</a>
-                </div>
+                <div> <input type="checkbox" id="bencanaAlam"> <label for="bencanaAlam">Bencana Alam</label><br> <input
+                        type="checkbox" id="transportasi"> <label for="transportasi">Transportasi</label><br> <input
+                        type="checkbox" id="saranaPrasarana"> <label for="saranaPrasarana">Sarana &
+                        Prasarana</label><br> <input type="checkbox" id="olahRaga"> <label for="bencanaAlam">Olah
+                        Raga</label><br> <input type="checkbox" id="kesehatan"> <label
+                        for="bencanaAlam">Kesehatan</label><br> <input type="checkbox" id="keamanan"> <label
+                        for="bencanaAlam">Keamanan</label><br> <input type="checkbox" id="tes"> <label
+                        for="bencanaAlam">[Tes Kategori]</label><br> <input type="checkbox" id="tes1"> <label
+                        for="bencanaAlam">[Tes Kategori 1]</label><br> <a href="#">Tambah Kategori...</a> </div>
                 <div>
                     <h5>Tag</h5>
-                    <div>
-                        <span class="badge bg-secondary">Sampah</span>
-                        <span class="badge bg-secondary">Air Meluap</span>
-                        <span class="badge bg-secondary">Sungai</span>
-                        <span class="badge bg-secondary">Hujan</span>
-                        <span class="badge bg-secondary">Samarkan Derasnya</span>
-                    </div>
+                    <div id="tag-container"> <span class="badge bg-secondary tag-item" id="sampah">Sampah</span> <span
+                            class="badge bg-secondary tag-item" id="airMeluap">Air Meluap</span> <span
+                            class="badge bg-secondary tag-item" id="sungai">Sungai</span> <span
+                            class="badge bg-secondary tag-item" id="hujan">Hujan</span> <span
+                            class="badge bg-secondary tag-item" id="transport">Transportasi</span> <span
+                            class="badge bg-secondary tag-item" id="kecelakaan">Kecelakaan</span> <span
+                            class="badge bg-secondary tag-item" id="kebakaran">Kebakaran</span> <span
+                            class="badge bg-secondary tag-item" id="samarkanDerasnya">Samarkan Derasnya</span> <span
+                            class="badge bg-secondary tag-item" id="kesehatan">Kesehatan</span> <span
+                            class="badge bg-secondary tag-item" id="mental">Mental Disorder</span> <span
+                            class="badge bg-secondary tag-item" id="tes">[Tes Tag]</span> <span
+                            class="badge bg-secondary tag-item" id="tes1">[Tes Tag 1]</span> </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <!-- MAIN CONTENT -->
-    </div>
-    <!-- SIDE BAR -->
 
+    </div> 
+    <!-- SIDE BAR --> 
+     
+    <!-- Modal Dialog for Status Selection -->
+    <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="statusModalLabel">Pilih Status</h5> <button type="button"
+                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-check"> <input class="form-check-input" type="radio" name="statusOption"
+                                id="diterbitkan" value="Diterbitkan" checked> <label class="form-check-label"
+                                for="diterbitkan">Diterbitkan</label> </div>
+                        <div class="form-check"> <input class="form-check-input" type="radio" name="statusOption"
+                                id="draft" value="Draft"> <label class="form-check-label" for="draft">Draft</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer"> <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Batal</button> <button type="button" class="btn btn-primary"
+                        id="saveStatus">Simpan</button> </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -138,7 +154,6 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/addberita.js"></script>
-
 </body>
 
 </html>
